@@ -1,0 +1,43 @@
+4.1 intro ----------------------------------------------------------------------------
+
+  Integer vs integral types:
+
+  STANDARD INTEGER TYPES: short, int, long, long long
+  INTEGRAL TYPES: bool, various char types, standard int types. Use to store whole numbers, not decimals
+
+  _t is just short for type
+
+
+4.2 Void ----------------------------------------------------------------------------
+
+
+  void just means no type or incomplete type or lack of type
+
+
+4.3 Object sizes and the sizof operator ----------------------------------------------------------------------------
+
+An object with n bits can store 2^n unique values. 8-bit byte can hold 2^8 = 256 values
+
+Category | Type |	Minimum Size | Typical Size
+----------------------------------------------------------
+Boolean 	 bool	      1 byte	          1 byte
+
+Character	 char	      1 byte (exactly)	1 byte
+           wchar_t	  1 byte	          2 or 4 bytes
+           char8_t	  1 byte	          1 byte
+           char16_t	  2 bytes	          2 bytes
+           char32_t	  4 bytes	          4 bytes
+
+Integral	 short	    2 bytes	           2 bytes
+	         int	      2 bytes	           4 bytes
+	         long	      4 bytes	           4 or 8 bytes
+	         long long	8 bytes	           8 bytes
+
+Floating 	 float	    4 bytes	            4 bytes
+	         double	    8 bytes	            8 bytes
+	         long double	8 bytes	          8, 12, or 16 bytes
+
+Pointer	  std::nullptr_t	4 bytes	        4 or 8 bytes
+
+
+FOR EXAMPLE OF SIZEOF OPERATOR GO TO learn_cpp/4_data_types/4.2_sizeof_operator
