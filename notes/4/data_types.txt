@@ -1,4 +1,4 @@
-4.1 intro ----------------------------------------------------------------------------
+4.1 intro ==============================================================================================================
 
   Integer vs integral types:
 
@@ -8,13 +8,13 @@
   _t is just short for type
 
 
-4.2 Void ----------------------------------------------------------------------------
+4.2 Void ==============================================================================================================
 
 
   void just means no type or incomplete type or lack of type
 
 
-4.3 Object sizes and the sizof operator ----------------------------------------------------------------------------
+4.3 Object sizes and the sizof operator ==============================================================================================================
 
 An object with n bits can store 2^n unique values. 8-bit byte can hold 2^8 = 256 values
 
@@ -41,3 +41,118 @@ Pointer	  std::nullptr_t	4 bytes	        4 or 8 bytes
 
 
 FOR EXAMPLE OF SIZEOF OPERATOR GO TO learn_cpp/4_data_types/4.2_sizeof_operator
+
+
+4.4 Signed ints ==============================================================================================================
+
+An integer is a INTEGRAL because its not a decimal 
+
+
+type            min size              note
+----------------------------------------------------------------------------
+short int       16 bits=2 bytes     
+int             16 bits=2 bytes       typically 4 bytes 
+long int        32 bits=4 bytes      
+long long int   64 bits=8 bytes   
+
+
+
+
+There are signed and unsigned ints. Signed ints hold negative to positive numbers (you already know this)
+
+short s;        // min size 2 bytes
+int i;          // usually 4 bytes but can be 2
+long l;         // difference between int and long as the minimum long can hold is 4 bytes instead of 2 for int
+long long ll;   // minimum 8 bytes
+
+
+
+size/type       range
+----------------------------------------------------------------------------
+8-bit signed	  -128 to 127
+16-bit signed	  -32,768 to 32,767
+32-bit signed	  -2,147,483,648 to 2,147,483,647
+64-bit signed	  -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+
+
+n-bit signed variable has a range of -(2^n-1) to (2^n-1)-1
+
+EXAMPLE:
+
+for an 8 bit signed  
+
+  negative:
+    -(2^8-1) = -(2^7) = -128
+  positive limit:
+    (2^8-1) - 1 = 2^7-1 = 128 - 1 = 127
+
+assigning a value that is bigger than the max is called an overflow and wraps the value around to the min
+
+
+QUIZ ------------------------------------
+
+q1
+  What would the range of a 5-bit signed integer be?
+
+  -(2^4) = -16 (lower end)
+  (2^n-1)-1 = 15 (high end)
+
+q2
+  What is the result of 13 / 5?
+
+  2 remainder 3, the remainder is dropped leaving just 2
+
+q3
+  What is the result of -13 / 5?
+
+  -2 remainder -3, the remainder is dropped leaving just 2
+
+
+
+4.5 — Unsigned integers, and why to avoid them ==========================================================================================================================
+
+Unsigned ints can only handle non negative numbers 
+
+How to define them:
+
+unsigned short us;
+unsigned int ui;
+unsigned long ul;
+unsigned long long ull;
+
+
+Size/Type         Range 
+------------------------------------------------------------------------------------------
+1 byte unsigned	  0 to 255
+2 byte unsigned	  0 to 65,535
+4 byte unsigned	  0 to 4,294,967,295
+8 byte unsigned	  0 to 18,446,744,073,709,551,615
+
+
+An n-bit unsigned variable has a range of 0 to (2^n)-1
+
+assigning a value that is bigger than the max is called an overflow and wraps the value around to the min
+
+
+NOTE !!!!!!!!!!!!!!!!!!!!!!!!!
+
+Some people (inluding google) believe that devs should avoid using unisged ints 
+
+This is based on 2 behaviors that can cause problems. 
+
+Using signed as an example, it takes a little work to accidentally overflow a signed int because the top and bottom are far from 0. 
+With unsigned its easier to underflow since the min is 0 which is close to where the majoirty of all values are.. 
+
+
+FOR EXAMPLES go to: C++/learn_cpp/4_data_types/4.5_unsigned_ints_bad_examples
+
+There are still examples of cases where its okay/good to use unsigned numbers.
+
+#1: they are preferred when dealing with bit manipulation and when its neccessary for wrap around behavior ie. (using certain types for certain file formats that expect unsigned params)
+#2: also array indexing 
+#3: embedded systems 
+
+
+4.6 — Fixed-width integers and size_t ===========================================================================================================
+
+
