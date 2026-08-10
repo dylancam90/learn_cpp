@@ -153,6 +153,5 @@ There are still examples of cases where its okay/good to use unsigned numbers.
 #3: embedded systems 
 
 
-4.6 — Fixed-width integers and size_t ===========================================================================================================
 
 
