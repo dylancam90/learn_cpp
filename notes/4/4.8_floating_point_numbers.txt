@@ -1,0 +1,27 @@
+4.8 — Floating point numbers==============================================================================================================================================================
+
+Floating point types 
+
+Category              C++ Type              Typical Sizes
+------------------------------------------------------------------------
+Floating Point        float                 4 bytes 
+                      double                8 bytes 
+                      long double           8, 12, or 16 bytes
+
+On modern archs are conventially implemented using IEEE 745, float is 4 bytes, double is 8, and long double can vary between 8 and 16. 
+
+IT IS RECOMMENDED TO AVOID LONG DOUBLE!
+
+
+Go here for code example and how to use them:
+
+  learn_cpp/4_data_types/4.8_floating_numbers/main.cpp
+
+
+Precsion--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+A float can represent 6-9 digits of precsion
+double 15-18 with most having at least 16 
+long double 15,18, or 33
+
+std::cout has a default precsion of 6 see more in the cpp files

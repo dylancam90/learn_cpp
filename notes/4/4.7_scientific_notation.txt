@@ -1,0 +1,38 @@
+4.7 — Introduction to scientific notation =========================================================================================================================================
+
+Shorthand for large numbers in the form of significand * 10 ^ exponent, for example:
+
+1.2 * 10^4 = 12,000
+
+The way this works is simply by moving the comma 4 places to the right.
+
+If you have an incredibly large number like the mass of an electron: 9.1093837e-31 kg you would move the decimal 31 places to the left
+
+Significant digits-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+If given the number 3.14 as the only significant digits you would experss it like this: 3.14e0 
+You also want to trim off leading and trailing zeros if they arent significant
+
+
+Examples----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+You noramlly want to try to get rid of the leading zeros as opposed to the trailing
+
+Start with: 600.410
+Slide decimal point left 2 spaces: 6.00410e2
+No leading or trailing 0s
+Left with: 6.00410e2 (6 significant digits)
+
+Start with: 0.0078900
+Slide decimal point 3 spaces to the right: 0007.8900e-3
+Tirm leading/trailing 0s: 7.8900e-3 (5 significant digits)
+
+Starts with: 42030 (no info saying the trailing 0 is significant)
+Slide decimal 4 spaces to the left: 4.2030e4
+trim leading/trailing 0s: 4.203e4
+Left with 4.203e4 (4 significant digits)
+
+Start with 42030 (assume trailing zero is significant)
+Slide decimal 4 spaces the left: 4.2030e4
+Keep trailing zero 
+Left with 4.2030e4

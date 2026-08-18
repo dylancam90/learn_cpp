@@ -1,4 +1,4 @@
-4.6 — Fixed-width integers and size_t ===========================================================================================================
+4.6 — Fixed-width integers and size_t ==============================================================================================================================================
 
 
 Sometimes you need to be sure of an ints exact exact size, thats where fixed ints come in 
@@ -10,9 +10,9 @@ std::uint_t       1 byte unsigned                0 to 255
 std::int16_t      2 bytes signed                 -32,768 to 32,767
 std::uint16_t     2 bytes unsigned               0 to 65,535
 std::int32_t      4 bytes signed                 -2,147,483,648 to 2,147,483,647
-std::uint32_t     4 bytes unsigned               0 to 4 billion (not exact)
-std::int64_t      8 bytes signed                 look up range
-std::uint64_t     8 bytes unsigned               look up range
+std::uint32_t     4 bytes unsigned               0 to 4,294,967,295
+std::int64_t      8 bytes signed                 -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+std::uint64_t     8 bytes unsigned               0 to 18,446,744,073,709,551,615
 
 For fixed width ints use #include <cstdint>
 
@@ -20,8 +20,6 @@ For std::int8 and std::uint8 the caveat is that its treated as signed ans unsign
 
 
 BEST PRACTICES:
-
-Best practice
 
 Prefer int when the size of the integer doesn’t matter (e.g. the number will always fit within the range of a 2-byte signed integer). For example, if you’re asking the user to enter their age, or counting from 1 to 10, it doesn’t matter whether int is 16-bits or 32-bits (the numbers will fit either way). This will cover the vast majority of the cases you’re likely to run across.
 Prefer std::int#_t when storing a quantity that needs a guaranteed range.
@@ -35,7 +33,7 @@ The 8-bit fixed-width integer types (prefer a 16-bit fixed-width integer type in
 Any compiler-specific fixed-width integers (for example, Visual Studio defines __int8, __int16, etc…)
 
 
-sizeof() and std::size_t ==========================================================================================
+sizeof() and std::size_t =======================================================================================================================================================
 
 When sizeof() returns it doesnt return a int it returns the std::size_t type 
 
