@@ -1,0 +1,18 @@
+/*
+
+  The workspace uses clang for intelliSense because some headers (the newer ones) weren't being resolved by g++ 
+  continue to use g++ for compilation
+
+*/
+{
+  "configurations": [
+    {
+      "name": "Linux",
+      "defines": [],
+      "intelliSenseMode": "linux-clang-x64",
+      "cppStandard": "c++23",
+      "compilerPath": "/usr/bin/clang++"
+    }
+  ],
+  "version": 4
+}
