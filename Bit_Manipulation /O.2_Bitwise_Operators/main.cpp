@@ -180,7 +180,7 @@ int main()
     Which is not whats intended. Here is a larger example in code
   */
 
-  std::uint8_t c2 {0b00001111};                 // 0000 1111
+  std::uint8_t c2 {0b0000'1111};                 // 0000 1111
   std::cout << std::bitset<32>(~c) << '\n';     // incorrect: prints 11111111111111111111111111110000 because it was expanded to a larger size
   std::cout << std::bitset<32>(c << 6) << '\n'; // incorrect: prints 0000000000000000001111000000 (same thing)
   // std::uint8_t cneg {~c};                    // error: narrowing conversion from unsigned int to std::uint8_t
@@ -192,7 +192,7 @@ int main()
     produces the correct results:
   */
 
-  std::uint8_t c3 {0b00001111}; // 0000 1111
+  std::uint8_t c3 {0b0000'1111}; // 0000 1111
 
   std::cout << std::bitset<32>( static_cast<std::uint8_t>(~c) ) << '\n';        // correct: prints 00000000000000000000000011110000
   std::cout << std::bitset<32>( static_cast<std::uint8_t>(c << 6) ) << '\n';    // correct: prints 0000000000000000000011000000
