@@ -10,19 +10,19 @@ int main() {
   int x;
 
   // Copy initialization (issues: Narrowing and function vexing)
-  int x = 5;
+  int y = 5;
 
   // Direct initialization /  Parenthesis initialization (issues: Narrowing and function vexing)
-  int x(5);
+  int c(5);
 
   // Direct list initialization / uniform initialization (best: prevents narrowing)
-  int x{5};
+  int k{5};
 
   // Copy list initialization (not as safe as direct list initialization / value  initialization)
-  int x = {5};
+  int l = {5};
 
   // Value initialization
-  int x{};
+  int m{};
 
   /* 
     Q - What is the difference between initialization and assignment? 

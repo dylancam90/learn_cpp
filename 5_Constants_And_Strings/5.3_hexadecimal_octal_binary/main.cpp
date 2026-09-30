@@ -5,6 +5,24 @@
 #include <format> // C++20
 
 /* 
+
+  Octal and hexadecimal literals
+
+  Octal is base 8. Obviosuly that means that there are 8 numbers and they are 0, 1, 2, 3, 4, 5, 6, and 7
+  You skip 8 and add do "10" this means 8
+
+
+  Hexadecimal is base 16. 
+
+  Decimal         0     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15
+  Binary          0     1    10    11   100   101   110   111  1000  1001  1010  1011  1100  1101  1110  1111
+  Octal           0     1     2     3     4     5     6     7    10    11    12    13    14    15    16    17
+  Hexadecimal     0     1     2     3     4     5     6     7     8     9     A     B     C     D     E     F
+
+*/
+
+
+/* 
   #include <print> is a modern library and g++ doesnt automatically assume you want to use the latest version so you have to specify
 
   TO COMPILE THIS PROGRAM WITHOUT A IMPORT ERROR: 
