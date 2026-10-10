@@ -186,26 +186,48 @@ int main()
   /* 
     SUMMARY ================================================================================================================================ 
 
+
+    FROM CHATGPT AND MORE TO THE POINT:
+
+    flags |= mask;       // SET:    guarantee bits become 1
+
+    flags &= ~mask;      // CLEAR:  guarantee bits become 0
+
+    flags ^= mask;       // TOGGLE: reverse their current state
+
+    flags & mask         // TEST:   see which selected bits are currently 1
+
+
     Summarizing how to set, clear, toggle, and query bit flags:
 
-    To query bit states, we use bitwise AND:
 
-    if (flags & option4) ... // if option4 is set, do something
+      To query bit states, we use bitwise AND:
 
-    To set bits (turn on), we use bitwise OR:
+        if (flags & option4) ... // if option4 is set, do something
 
-    flags |= option4; // turn option 4 on.
-    flags |= (option4 | option5); // turn options 4 and 5 on.
+      To set bits (turn on), we use bitwise OR:
 
-    To clear bits (turn off), we use bitwise AND with bitwise NOT:
+        flags |= option4; // turn option 4 on.
+        flags |= (option4 | option5); // turn options 4 and 5 on.
 
-    flags &= ~option4; // turn option 4 off
-    flags &= ~(option4 | option5); // turn options 4 and 5 off
+      To clear bits (turn off), we use bitwise AND with bitwise NOT:
 
-    To flip bit states, we use bitwise XOR:
+        flags &= ~option4; // turn option 4 off
+        flags &= ~(option4 | option5); // turn options 4 and 5 off
 
-    flags ^= option4; // flip option4 from on to off, or vice versa
-    flags ^= (option4 | option5); // flip options 4 and 5
+      To flip bit states, we use bitwise XOR:
+
+        flags ^= option4; // flip option4 from on to off, or vice versa
+        flags ^= (option4 | option5); // flip options 4 and 5
+
+        Other method for clearing bits: 
+
+          flags &= ~(bit2 | bit5);
+
+
+
+
+
   */
 
   return 0;
